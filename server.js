@@ -18,10 +18,9 @@ server.listen(8888, ()=>{
   });
 });
 
-var wsc = new ws(`ws://0.0.0.0:3001/sub`);
+var wsc = new ws(`ws://0.0.0.0:3001/dynamic/cat`);
 wsc.on('open', ()=>{
   console.log('client open');
-
 });
 wsc.on('message', (data, flags)=>{
   console.log('wsc: ', data);
